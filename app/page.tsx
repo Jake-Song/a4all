@@ -1,4 +1,10 @@
 import PolisConversation from "@/app/components/PolisConversation";
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '함께 묻고 함께 답하기',
+  description: '함께 문제 해결하기',
+}
 
 export default function Home() {
   return (    
