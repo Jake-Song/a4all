@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (    
     <div className="justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <div className="w-full border-b border-gray-100/30 mt-8 pb-2 text-left">
-        <h1 className="text-2xl font-bold ml-4">함께 묻고 함께 답하기</h1>
+      <div className="w-full border-b border-gray-100/30 mt-8 pb-2 text-left flex items-center gap-4">
+        <img src="/logo.svg" alt="Logo" className="h-16 w-16 ml-4" />
+        <h1 className="text-2xl font-bold">함께 묻고 함께 답하기</h1>
       </div>
       <main className="flex flex-col gap-[32px] row-start-2 items-center w-full">
         <div className="p-4">
