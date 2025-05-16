@@ -23,8 +23,8 @@ export default function PolisConversation() {
       data-conversation_id="7mfvbyhp6b"
       data-lang="ko-KR"
       style={{
-        minHeight: '300px',
-        width: '60%',
+        minHeight: '400px',
+        width: '100%',
       }}
     />
   );
