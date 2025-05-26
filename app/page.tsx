@@ -1,10 +1,4 @@
-import PolisConversation from "@/app/components/PolisConversation";
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '함께 묻고 함께 답하기',
-  description: '함께 문제 해결하기',
-}
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -37,9 +31,9 @@ export default function Home() {
         </p>
         <p className="text-gray-500">
            5. Pol.is 플랫폼 알아보기{" "}
-           <a href="https://compdemocracy.org/knowledge-base/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+           <Link href="https://compdemocracy.org/knowledge-base/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
               (https://compdemocracy.org/knowledge-base/)
-           </a>
+           </Link>
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-6 w-[90%] max-w-3xl mx-auto my-8 mt-12 justify-center items-center">
@@ -47,12 +41,12 @@ export default function Home() {
           <h3 className="text-xl font-semibold mb-2 text-center">사법 개혁</h3>
           <p className="text-gray-500 mb-4 text-center">사법 개혁의 구체적인 실행 방안은 무엇일까?</p>
           <div className="flex-grow flex items-center justify-center">
-            <a 
+            <Link 
               href="/justice" 
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center w-full"
             >
               토론 참여하기
-            </a>
+            </Link>
           </div>
         </div>
         
@@ -60,12 +54,12 @@ export default function Home() {
           <h3 className="text-xl font-semibold mb-2 text-center">시민 공약 제안 - 경제</h3>
           <p className="text-gray-500 mb-4 text-center">시민들이 바라는 공약은 무엇일까요?</p>
           <div className="flex-grow flex items-center justify-center">
-            <a 
+            <Link 
               href="/pledge" 
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center w-full"
             >
               토론 참여하기
-            </a>
+            </Link>
           </div>
         </div>
       </div>

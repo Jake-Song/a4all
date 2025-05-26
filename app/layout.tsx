@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from 'next/image';
+import Link from 'next/link';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,8 +31,8 @@ export default function RootLayout({
       >
         <div className="justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
           <div className="w-full border-b border-gray-100/30 mt-8 pb-2 text-left flex items-center gap-4">
-            <img src="/logo.svg" alt="Logo" className="h-16 w-16 ml-4" />
-            <a href="/"><h1 className="text-2xl font-bold">함께 묻고 함께 답하기</h1></a>
+            <Image src="/logo.svg" alt="Logo" width={64} height={64} className="ml-4" />
+            <Link href="/"><h1 className="text-2xl font-bold">함께 묻고 함께 답하기</h1></Link>
           </div>
           <main className="flex flex-col gap-[32px] row-start-2 items-center w-full">
             {children}
