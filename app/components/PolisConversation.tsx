@@ -2,7 +2,13 @@
 
 import { useEffect } from 'react';
 
-export default function PolisConversation() {
+interface PolisConversationProps {
+  conversationId?: string;
+}
+
+export default function PolisConversation({
+  conversationId
+}: PolisConversationProps) {
   useEffect(() => {
     // Load Polis script
     const script = document.createElement('script');
@@ -20,7 +26,7 @@ export default function PolisConversation() {
     <div
       className="polis"
       data-page_id="PAGE_ID"
-      data-conversation_id="7mfvbyhp6b"
+      data-conversation_id={conversationId}
       data-lang="ko-KR"
       style={{
         minHeight: '400px',
