@@ -12,7 +12,8 @@ export default function PolisConversation({
   useEffect(() => {
     // Load Polis script
     const script = document.createElement('script');
-    script.src = 'https://pol.is/embed.js';
+    // script.src = 'https://pol.is/embed.js';
+    script.src = 'http://localhost/embed.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -27,7 +28,8 @@ export default function PolisConversation({
       className="polis"
       data-page_id="PAGE_ID"
       data-conversation_id={conversationId}
-      data-lang="ko-KR"
+      data-ui_lang="ko-KR"
+      data-bg_white="false"
       style={{
         minHeight: '400px',
         width: '100%',
