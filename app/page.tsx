@@ -1,20 +1,38 @@
 import Link from 'next/link';
+import MermaidChart from './components/MermaidChart';
 
 export default function Home() {
   return (
     <>
+     
       <div className="p-4">
         <h1 className="text-center text-2xl font-bold border-b border-gray-100/30 pb-4 mt-12 mb-4">참여하기</h1>
         <p className="text-gray-500">
-          1. 해당 안건에 대한 자신의 의견을 작성해 주세요.
+          ✍️ 해당 안건에 대한 자신의 의견을 작성해 주세요.
         </p>
         <p className="text-gray-500">
-          2. 찬성 혹은 반대 하고 싶은 의견이 있으면 투표해 주세요.
+          👍 찬성 혹은 반대 하고 싶은 의견이 있으면 투표해 주세요.
         </p>
         <p className="text-gray-500">
-          3. 7명이상 투표하면 시각화된 데이터를 확인할 수 있습니다. 
+          📊 7명이상 투표하면 시각화된 데이터를 확인할 수 있습니다. 
         </p>
       </div>
+      <div className="w-full">
+        <MermaidChart chart={`
+            flowchart LR
+                A[시작] --> B[✍️ 의견 작성]
+                B --> C[👍 다른 의견에 투표]
+                C --> D{7명 이상 투표?}
+                D -->|예| E[📊 시각화된 데이터 확인]
+                D -->|아니오| C
+                style A fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+                style B fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+                style C fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+                style D fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+                style E fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+        `} />
+      </div>
+     
       <div className="p-4">
         <h1 className="text-center text-2xl font-bold border-b border-gray-100/30 pb-4 mb-4">어떻게 동작하나요?</h1>
         <p className="text-gray-500">
@@ -36,6 +54,21 @@ export default function Home() {
            </Link>
         </p>
       </div>
+      <div className="w-full">
+        <MermaidChart chart={`
+          flowchart LR
+              A[안건 생성] --> B[의견 투표]
+              B --> C[의견 그룹 분류]
+              C --> D[합의 의견 도출]
+              D --> E[결과 공유]
+              style A fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+              style B fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+              style C fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+              style D fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+              style E fill:#1a1a1a,stroke:#023dbf,stroke-width:2px,color:#fff
+        `} />
+      </div>
+      
       <div className="flex flex-col md:flex-row gap-6 w-[90%] max-w-3xl mx-auto my-8 mt-12 justify-center items-center">
         <div className="border border-gray-100/50 rounded-lg p-4 flex flex-col hover:shadow-lg transition-shadow duration-300 w-full md:w-96">
           <h3 className="text-xl font-semibold mb-2 text-center">사법 개혁</h3>
