@@ -12,8 +12,11 @@ export default function PolisConversation({
   useEffect(() => {
     // Load Polis script
     const script = document.createElement('script');
-    // script.src = 'https://pol.is/embed.js';
-    script.src = 'http://localhost/embed.js';
+    const embedUrl = process.env.NEXT_PUBLIC_POLIS_EMBED_URL;
+    if (!embedUrl) {
+      throw new Error('NEXT_PUBLIC_POLIS_EMBED_URL environment variable is not defined');
+    }
+    script.src = embedUrl;
     script.async = true;
     document.body.appendChild(script);
 
