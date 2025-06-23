@@ -71,11 +71,11 @@ export default function Home() {
       
       <div className="flex flex-col md:flex-row gap-6 w-[90%] max-w-3xl mx-auto my-8 mt-12 justify-center items-center">
         <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col hover:shadow-lg dark:hover:shadow-gray-800/50 transition-shadow duration-300 w-full md:w-96">
-          <h3 className="text-xl font-semibold mb-2 text-center">사법 개혁</h3>
-          <p className="mb-4 text-center">사법 개혁의 구체적인 실행 방안은 무엇일까?</p>
+          <h3 className="text-xl font-semibold mb-2 text-center">민주주의 확산</h3>
+          <p className="mb-4 text-center">민주주의 확산의 구체적인 실행 방안은 무엇일까?</p>
           <div className="flex-grow flex items-center justify-center">
             <Link 
-              href="/justice" 
+              href="/democracy" 
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center w-full"
             >
               토론 참여하기
@@ -84,11 +84,11 @@ export default function Home() {
         </div>
         
         <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col hover:shadow-lg dark:hover:shadow-gray-800/50 transition-shadow duration-300 w-full md:w-96">
-          <h3 className="text-xl font-semibold mb-2 text-center">시민 공약 제안 - 경제</h3>
-          <p className="mb-4 text-center">시민들이 바라는 공약은 무엇일까요?</p>
+          <h3 className="text-xl font-semibold mb-2 text-center">정치 개혁</h3>
+          <p className="mb-4 text-center">정치 개혁의 구체적인 실행 방안은 무엇일까?</p>
           <div className="flex-grow flex items-center justify-center">
             <Link 
-              href="/pledge" 
+              href="/policy" 
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300 text-center w-full"
             >
               토론 참여하기
